@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 880" role="img"
+     aria-labelledby="dotfitHeroTitle" preserveAspectRatio="xMidYMid slice">
+  <title id="dotfitHeroTitle">An athlete pressing a barbell overhead</title>
+
+  <!--
+    Dotfit Fitness. Home hero illustration.
+
+    Colours are the three sampled from the logo: lime #BCD641,
+    charcoal #23241E, off-white #F7F8F3. Nothing else.
+
+    The large lime circle is the dot from the logo, blown up to poster
+    scale. Everything else sits on top of it.
+
+    This is a fallback. It shows until images/hero.jpg exists; once that
+    photo is in place the photo covers it and this is never seen. To
+    change that behaviour, edit the background-image on .hero__media in
+    index.html.
+  -->
+
+  <defs>
+    <pattern id="dfDots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="13" cy="13" r="1.9" fill="#8AA320" opacity=".26"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="880" fill="#F7F8F3"/>
+  <rect width="800" height="880" fill="url(#dfDots)"/>
+
+  <!-- the logo's dot, at poster scale -->
+  <circle cx="400" cy="392" r="252" fill="#BCD641"/>
+
+  <!-- ground shadow -->
+  <ellipse cx="400" cy="782" rx="176" ry="17" fill="#23241E" opacity=".09"/>
+
+  <g fill="#23241E">
+
+    <!-- barbell -->
+    <rect x="146" y="217" width="508" height="15" rx="7.5"/>
+    <rect x="146" y="177" width="29" height="95" rx="9"/>
+    <rect x="184" y="193" width="23" height="63" rx="7"/>
+    <rect x="625" y="177" width="29" height="95" rx="9"/>
+    <rect x="593" y="193" width="23" height="63" rx="7"/>
+
+    <!-- head -->
+    <circle cx="400" cy="318" r="35"/>
+
+    <!-- torso -->
+    <path d="M347 366 h106 l-15 156 -9 50 h-58 l-9 -50 z"
+          stroke="#23241E" stroke-width="16" stroke-linejoin="round"/>
+
+  </g>
+
+  <!-- arms, pressed overhead -->
+  <g fill="none" stroke="#23241E" stroke-width="31"
+     stroke-linecap="round" stroke-linejoin="round">
+    <path d="M336 240 L288 322 L354 374"/>
+    <path d="M464 240 L512 322 L446 374"/>
+
+    <!-- legs -->
+    <path d="M382 556 L366 664 L358 752"/>
+    <path d="M418 556 L434 664 L442 752"/>
+  </g>
+
+  <!-- feet -->
+  <g fill="#23241E">
+    <rect x="326" y="744" width="60" height="20" rx="10"/>
+    <rect x="414" y="744" width="60" height="20" rx="10"/>
+  </g>
+
+  <!-- the dot motif again, small, as a rhythm marker -->
+  <g fill="#BCD641">
+    <circle cx="86" cy="806" r="11"/>
+    <circle cx="126" cy="806" r="7"/>
+    <circle cx="156" cy="806" r="4"/>
+  </g>
+</svg>
