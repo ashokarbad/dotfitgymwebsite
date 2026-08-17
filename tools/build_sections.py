@@ -6,7 +6,7 @@ Dotfit section builder
     python3 tools/build_sections.py
 
 Writes the activity-selector markup and the gallery blocks into the pages
-inside site/. Safe to run as many times as you like — every block it
+inside docs/. Safe to run as many times as you like — every block it
 writes is fenced with an HTML comment marker and replaced in place, so a
 second run updates rather than duplicates.
 
@@ -29,7 +29,7 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE = os.path.join(ROOT, "site")
+SITE = os.path.join(ROOT, "docs")
 
 BEGIN = "<!-- DOTFIT:%s BEGIN -->"
 END = "<!-- DOTFIT:%s END -->"

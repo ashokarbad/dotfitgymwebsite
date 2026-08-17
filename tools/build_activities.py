@@ -7,12 +7,12 @@ Dotfit activity pages
 
 Reads content/activities.json and writes one page per entry:
 
-    site/activity-sinhagad-trek.html
+    docs/activity-sinhagad-trek.html
 
 Each page reuses the header, footer, navigation and SEO block from
-site/activity.html, so it stays in step with the rest of the site
+docs/activity.html, so it stays in step with the rest of the site
 automatically. Pages for entries that were deleted from the JSON are
-removed. site/activity.html itself is left alone — it is the
+removed. docs/activity.html itself is left alone — it is the
 documentation page.
 
 Every generated page carries: hero image, name, tagline, description,
@@ -26,7 +26,7 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE = os.path.join(ROOT, "site")
+SITE = os.path.join(ROOT, "docs")
 TEMPLATE = os.path.join(SITE, "activity.html")
 DATA = os.path.join(ROOT, "content", "activities.json")
 

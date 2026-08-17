@@ -5,9 +5,9 @@ Dotfit team builder
 
     python3 tools/build_team.py
 
-Reads content/team.json and writes the team grid into site/team.html
+Reads content/team.json and writes the team grid into docs/team.html
 (inside the DOTFIT:TEAM markers) and a 3-4 person preview into
-site/index.html (inside DOTFIT:TEAM-PREVIEW). Safe to re-run — both
+docs/index.html (inside DOTFIT:TEAM-PREVIEW). Safe to re-run — both
 blocks are replaced in place, nothing else on either page is touched.
 
 Add a team member: add an entry to content/team.json, run this script.
@@ -19,7 +19,7 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE = os.path.join(ROOT, "site")
+SITE = os.path.join(ROOT, "docs")
 DATA = os.path.join(ROOT, "content", "team.json")
 
 BEGIN = "<!-- DOTFIT:%s BEGIN -->"
@@ -78,7 +78,7 @@ def main():
         html = fh.read()
     html, found = put(html, "TEAM", '<div class="team rv">\n' + team_grid + "\n</div>")
     if not found:
-        raise SystemExit("No DOTFIT:TEAM markers in site/team.html")
+        raise SystemExit("No DOTFIT:TEAM markers in docs/team.html")
     with open(path, "w", encoding="utf-8") as fh:
         fh.write(html)
     print("  team.html      %d members" % len(members))

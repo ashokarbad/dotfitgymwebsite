@@ -6,8 +6,8 @@ Dotfit classes builder
     python3 tools/build_classes.py
 
 Reads content/classes.json and writes the full schedule into
-site/classes.html (inside the DOTFIT:CLASSES markers), the category and
-day filter pills, and a short preview into site/index.html (inside
+docs/classes.html (inside the DOTFIT:CLASSES markers), the category and
+day filter pills, and a short preview into docs/index.html (inside
 DOTFIT:CLASSES-PREVIEW). Safe to re-run.
 
 Add a class or a batch: edit content/classes.json, run this script.
@@ -20,7 +20,7 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE = os.path.join(ROOT, "site")
+SITE = os.path.join(ROOT, "docs")
 DATA = os.path.join(ROOT, "content", "classes.json")
 
 BEGIN = "<!-- DOTFIT:%s BEGIN -->"
@@ -137,7 +137,7 @@ def main():
         html = fh.read()
     html, found = put(html, "CLASSES", body)
     if not found:
-        raise SystemExit("No DOTFIT:CLASSES markers in site/classes.html")
+        raise SystemExit("No DOTFIT:CLASSES markers in docs/classes.html")
     with open(path, "w", encoding="utf-8") as fh:
         fh.write(html)
     print("  classes.html   %d classes, %d categories" % (len(classes), len(categories)))
