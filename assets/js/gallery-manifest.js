@@ -56,22 +56,8 @@ window.DOTFIT_GALLERY = {
     "fitness-challenges": [],
     "outdoor": [],
     "events": [],
-    "community": [
-      {
-        "src": "images/gallery/community/gym.webp",
-        "title": "Gym"
-      },
-      {
-        "src": "images/gallery/community/gymtrainer.webp",
-        "title": "Gymtrainer"
-      }
-    ],
-    "nutrition": [
-      {
-        "src": "images/gallery/nutrition/images.jpeg",
-        "title": "Images"
-      }
-    ],
+    "community": [],
+    "nutrition": [],
     "sports-wear": []
   }
 };

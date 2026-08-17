@@ -91,22 +91,6 @@ h3.display{font-size:clamp(1.2rem,2vw,1.6rem);line-height:1.05}
 .center{text-align:center;margin-inline:auto}
 .center .eyebrow{justify-content:center}
 
-.card {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.card__body {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.card__more {
-  margin-top: auto;
-}
-
 /* ── Buttons ── */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
@@ -745,3 +729,98 @@ h3.display{font-size:clamp(1.2rem,2vw,1.6rem);line-height:1.05}
   margin-bottom:clamp(1.75rem,3.5vw,2.75rem)}
 .story__hero img{width:100%;height:100%;object-fit:cover}
 @media(max-width:760px){.story__hero{aspect-ratio:4/3}}
+
+/* ═══════════════════════════════════════════════════════════════
+   TEAM — team.html and the home page "Meet the team" preview
+   ═══════════════════════════════════════════════════════════════ */
+
+.team{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.35rem}
+.team--preview{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+
+.team__card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);
+  overflow:hidden;box-shadow:var(--shadow-1);
+  transition:transform .32s var(--ease),box-shadow .32s var(--ease),border-color .32s var(--ease)}
+.team__card:hover{transform:translateY(-5px);box-shadow:var(--shadow-2);border-color:var(--lime)}
+
+.team__photo{aspect-ratio:4/5;background:var(--lime-tint) center/cover no-repeat;
+  background-image:var(--dots);background-size:22px 22px;position:relative;overflow:hidden}
+.team__photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+.team__body{padding:1.35rem 1.3rem 1.5rem}
+.team__name{font-family:var(--f-display);text-transform:uppercase;
+  font-variation-settings:'wdth' 100,'wght' 780;font-size:1.05rem;letter-spacing:.01em;
+  margin:0 0 .2rem;color:var(--ink)}
+.team__role{font-size:.82rem;font-variation-settings:'wght' 650;color:var(--lime-ink);
+  margin:0 0 .8rem;display:flex;align-items:flex-start;gap:.45rem}
+.team__role::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--lime);
+  flex:none;margin-top:.42em}
+.team__bio{font-size:.87rem;line-height:1.6;color:var(--muted);margin:0}
+.team__tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.95rem}
+.team__tag{border:1px solid var(--line);border-radius:999px;padding:.28rem .7rem;
+  font-size:.68rem;letter-spacing:.03em;color:var(--ink-2);background:var(--mist)}
+
+@media(max-width:480px){.team{grid-template-columns:1fr 1fr}}
+@media(max-width:400px){.team{grid-template-columns:1fr}}
+
+/* ═══════════════════════════════════════════════════════════════
+   CLASSES & BATCHES — classes.html and the home page preview
+   ═══════════════════════════════════════════════════════════════ */
+
+.sched__notice{display:flex;gap:.7rem;align-items:flex-start;background:var(--lime-tint);
+  border:1px solid var(--lime);border-radius:var(--r-sm);padding:1rem 1.2rem;
+  margin-bottom:2.25rem;font-size:.87rem;color:var(--ink-2);line-height:1.6}
+.sched__notice svg{width:18px;height:18px;flex:none;margin-top:.15rem;stroke:var(--lime-700);
+  fill:none;stroke-width:1.8}
+.sched__notice b{color:var(--ink);font-variation-settings:'wght' 650}
+
+.sched__filters{display:flex;flex-direction:column;gap:.85rem;margin-bottom:2.5rem}
+.sched__filterrow{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+.sched__filterrow > span{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);flex:0 0 auto;padding-top:.5rem}
+.sched__filterrow .filters{margin-bottom:0;flex:1 1 auto}
+
+.classgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1.15rem}
+.classcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);
+  padding:1.5rem 1.4rem;box-shadow:var(--shadow-1);
+  transition:transform .28s var(--ease),box-shadow .28s var(--ease),border-color .28s var(--ease)}
+.classcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-2);border-color:var(--lime)}
+.classcard[hidden]{display:none}
+.classcard__top{display:flex;align-items:flex-start;justify-content:space-between;
+  gap:.75rem;margin-bottom:1.1rem}
+.classcard__top h3{font-family:var(--f-display);text-transform:uppercase;
+  font-variation-settings:'wdth' 104,'wght' 760;font-size:1.05rem;letter-spacing:.01em;
+  margin:0;color:var(--ink)}
+.classcard__level{border:1px solid var(--line);border-radius:999px;padding:.28rem .7rem;
+  font-size:.68rem;letter-spacing:.03em;color:var(--ink-2);background:var(--mist);flex:none}
+
+.classcard__batches{display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:var(--r-sm);overflow:hidden}
+.batch{background:var(--paper);padding:.95rem 1rem;transition:background .3s var(--ease)}
+.batch:hover{background:var(--lime-tint)}
+.batch[hidden]{display:none}
+.batch__label{font-family:var(--f-display);font-variation-settings:'wdth' 90,'wght' 700;
+  text-transform:uppercase;font-size:.68rem;letter-spacing:.08em;color:var(--lime-ink);
+  margin:0 0 .5rem}
+.batch__days{margin:0 0 .3rem;font-size:.82rem;color:var(--ink-2);line-height:1.5}
+.batch__time{margin:0 0 .5rem;font-family:var(--f-display);
+  font-variation-settings:'wdth' 92,'wght' 700;font-size:.95rem;color:var(--ink)}
+.batch__instr{margin:0;font-size:.78rem;color:var(--muted)}
+.batch__instr span{color:var(--ink-2);font-variation-settings:'wght' 600}
+
+/* Dance Fitness, Mobility and any other class with only one batch in the
+   markup (not filtered down to one — actually only one) get the full
+   width rather than an empty second column. */
+.classcard__batches:has(> .batch:only-child){grid-template-columns:1fr}
+
+/* when only one batch on a two-batch card is visible after filtering, let
+   it take the full width instead of leaving an empty column beside it */
+.classcard__batches:has(.batch[hidden]):not(:has(.batch:not([hidden]) ~ .batch:not([hidden]))){
+  grid-template-columns:1fr}
+
+.sched__empty{grid-column:1/-1}
+
+@media(max-width:560px){
+  .classgrid{grid-template-columns:1fr}
+  .classcard__batches{grid-template-columns:1fr}
+}
+

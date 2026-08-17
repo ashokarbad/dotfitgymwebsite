@@ -243,4 +243,61 @@
       });
     }
   });
+
+  /* ─────────────────────────────────────────────────────────────
+     3. CLASS SCHEDULE (classes.html)
+     Three independent filter rows — class, day, batch — combine
+     with AND logic. The generic [data-filterset] handler in
+     dotfit.js only tracks one active filter at a time per target,
+     which can't express "Yoga AND Monday AND Evening" together, so
+     this page gets its own small handler instead.
+     ───────────────────────────────────────────────────────────── */
+
+  (function () {
+    var grid = $('#classGrid');
+    if (!grid) return;
+
+    var state = { cat: 'all', day: 'all', time: 'all' };
+    var cards = $$('.classcard', grid);
+    var empty = $('#classEmpty');
+
+    function apply() {
+      var anyVisible = false;
+      cards.forEach(function (card) {
+        var catOk = state.cat === 'all' || card.dataset.cat === state.cat;
+        var batches = $$('.batch', card);
+        var cardHasVisibleBatch = false;
+
+        batches.forEach(function (b) {
+          var days = (b.dataset.days || '').split(' ');
+          var dayOk = state.day === 'all' || days.indexOf(state.day) > -1;
+          var timeOk = state.time === 'all' || b.dataset.batch === state.time;
+          var show = catOk && dayOk && timeOk;
+          b.hidden = !show;
+          if (show) cardHasVisibleBatch = true;
+        });
+
+        card.hidden = !cardHasVisibleBatch;
+        if (cardHasVisibleBatch) anyVisible = true;
+      });
+      if (empty) empty.hidden = anyVisible;
+    }
+
+    function wireGroup(id, key) {
+      var box = document.getElementById(id);
+      if (!box) return;
+      $$('.filter', box).forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          $$('.filter', box).forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+          state[key] = btn.dataset.classcat || btn.dataset.classday || btn.dataset.classtime;
+          apply();
+        });
+      });
+    }
+
+    wireGroup('classCatFilters', 'cat');
+    wireGroup('classDayFilters', 'day');
+    wireGroup('classTimeFilters', 'time');
+    apply();
+  })();
 })();
