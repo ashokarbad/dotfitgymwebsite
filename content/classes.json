@@ -1,0 +1,138 @@
+{
+  "_readme": [
+    "Class schedule for classes.html and the home page 'Find Your Class' preview.",
+    "Edit this file, then run: python3 tools/build_classes.py",
+    "",
+    "IMPORTANT — every time, day and instructor below is a placeholder.",
+    "This project has no source of Dotfit's actual batch timings or",
+    "instructor names, so nothing here is real. The times are round,",
+    "generic numbers chosen only to show the page's layout; 'Instructor:",
+    "[Instructor Name]' is meant to stay bracketed until a real name goes",
+    "in. The page itself carries a visible notice saying this is a sample",
+    "schedule for the same reason — don't remove that notice until the",
+    "real data replaces it.",
+    "",
+    "day codes: mon tue wed thu fri sat sun",
+    "time_of_day: morning | evening — used by the Morning/Evening filter.",
+    "level is a general description of the class itself (who it suits),",
+    "not a specific claim about Dotfit's programming.",
+    "",
+    "category should match an existing gallery/services category where one",
+    "exists (yoga, zumba, crossfit, hiit, cycling, aerobics, weight-training)",
+    "so the class links up with the rest of the site; new categories",
+    "(functional-training, dance-fitness, mobility, group-training) are",
+    "fine too, they just won't have a matching photo gallery yet."
+  ],
+  "categories": [
+    ["yoga", "Yoga"],
+    ["zumba", "Zumba"],
+    ["crossfit", "CrossFit"],
+    ["hiit", "HIIT"],
+    ["cycling", "Cycling"],
+    ["weight-training", "Strength Training"],
+    ["functional-training", "Functional Training"],
+    ["dance-fitness", "Dance Fitness"],
+    ["mobility", "Mobility"],
+    ["group-training", "Group Training"]
+  ],
+  "classes": [
+    {
+      "id": "yoga",
+      "name": "Yoga",
+      "category": "yoga",
+      "level": "All levels",
+      "batches": [
+        { "label": "Morning Batch", "days": ["mon","wed","fri"], "start": "7:00 AM", "end": "8:00 AM", "time_of_day": "morning", "instructor": "[Instructor Name]" },
+        { "label": "Evening Batch", "days": ["tue","thu","sat"], "start": "6:30 PM", "end": "7:30 PM", "time_of_day": "evening", "instructor": "[Instructor Name]" }
+      ]
+    },
+    {
+      "id": "zumba",
+      "name": "Zumba",
+      "category": "zumba",
+      "level": "All levels",
+      "batches": [
+        { "label": "Morning Batch", "days": ["mon","wed","fri"], "start": "8:00 AM", "end": "9:00 AM", "time_of_day": "morning", "instructor": "[Instructor Name]" },
+        { "label": "Evening Batch", "days": ["mon","wed","fri"], "start": "6:30 PM", "end": "7:30 PM", "time_of_day": "evening", "instructor": "[Instructor Name]" }
+      ]
+    },
+    {
+      "id": "crossfit",
+      "name": "CrossFit",
+      "category": "crossfit",
+      "level": "Intermediate–Advanced",
+      "batches": [
+        { "label": "Morning Batch", "days": ["mon","tue","thu","fri"], "start": "6:00 AM", "end": "7:00 AM", "time_of_day": "morning", "instructor": "[Instructor Name]" },
+        { "label": "Evening Batch", "days": ["mon","tue","thu","fri"], "start": "7:00 PM", "end": "8:00 PM", "time_of_day": "evening", "instructor": "[Instructor Name]" }
+      ]
+    },
+    {
+      "id": "hiit",
+      "name": "HIIT",
+      "category": "hiit",
+      "level": "Intermediate",
+      "batches": [
+        { "label": "Morning Batch", "days": ["tue","thu","sat"], "start": "7:00 AM", "end": "7:45 AM", "time_of_day": "morning", "instructor": "[Instructor Name]" },
+        { "label": "Evening Batch", "days": ["mon","wed","fri"], "start": "7:30 PM", "end": "8:15 PM", "time_of_day": "evening", "instructor": "[Instructor Name]" }
+      ]
+    },
+    {
+      "id": "cycling",
+      "name": "Cycling",
+      "category": "cycling",
+      "level": "All levels",
+      "batches": [
+        { "label": "Morning Batch", "days": ["mon","wed","fri"], "start": "6:30 AM", "end": "7:15 AM", "time_of_day": "morning", "instructor": "[Instructor Name]" },
+        { "label": "Evening Batch", "days": ["tue","thu"], "start": "6:00 PM", "end": "6:45 PM", "time_of_day": "evening", "instructor": "[Instructor Name]" }
+      ]
+    },
+    {
+      "id": "strength-training",
+      "name": "Strength Training",
+      "category": "weight-training",
+      "level": "All levels",
+      "batches": [
+        { "label": "Morning Batch", "days": ["mon","tue","wed","thu","fri"], "start": "6:00 AM", "end": "8:00 AM", "time_of_day": "morning", "instructor": "[Instructor Name]" },
+        { "label": "Evening Batch", "days": ["mon","tue","wed","thu","fri"], "start": "5:00 PM", "end": "9:00 PM", "time_of_day": "evening", "instructor": "[Instructor Name]" }
+      ]
+    },
+    {
+      "id": "functional-training",
+      "name": "Functional Training",
+      "category": "functional-training",
+      "level": "All levels",
+      "batches": [
+        { "label": "Morning Batch", "days": ["tue","thu","sat"], "start": "8:00 AM", "end": "9:00 AM", "time_of_day": "morning", "instructor": "[Instructor Name]" },
+        { "label": "Evening Batch", "days": ["mon","wed"], "start": "6:00 PM", "end": "7:00 PM", "time_of_day": "evening", "instructor": "[Instructor Name]" }
+      ]
+    },
+    {
+      "id": "dance-fitness",
+      "name": "Dance Fitness",
+      "category": "dance-fitness",
+      "level": "All levels",
+      "batches": [
+        { "label": "Evening Batch", "days": ["tue","thu","sat"], "start": "7:00 PM", "end": "8:00 PM", "time_of_day": "evening", "instructor": "[Instructor Name]" }
+      ]
+    },
+    {
+      "id": "mobility",
+      "name": "Mobility",
+      "category": "mobility",
+      "level": "All levels",
+      "batches": [
+        { "label": "Morning Batch", "days": ["sat"], "start": "9:00 AM", "end": "10:00 AM", "time_of_day": "morning", "instructor": "[Instructor Name]" }
+      ]
+    },
+    {
+      "id": "group-training",
+      "name": "Group Training",
+      "category": "group-training",
+      "level": "All levels",
+      "batches": [
+        { "label": "Morning Batch", "days": ["sat","sun"], "start": "8:00 AM", "end": "9:00 AM", "time_of_day": "morning", "instructor": "[Instructor Name]" },
+        { "label": "Evening Batch", "days": ["fri"], "start": "6:30 PM", "end": "7:30 PM", "time_of_day": "evening", "instructor": "[Instructor Name]" }
+      ]
+    }
+  ]
+}

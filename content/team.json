@@ -1,0 +1,96 @@
+{
+  "_readme": [
+    "Team roster for team.html and the home page 'Meet the Dotfit Team' preview.",
+    "Edit this file, then run: python3 tools/build_team.py",
+    "",
+    "Every name below is a bracketed placeholder — [Trainer Name] — on purpose.",
+    "This project has no source of real staff names, so nothing here should",
+    "read as a real person. Replace each [Trainer Name] with the actual staff",
+    "member, write their real bio, and swap the photo path for a real photo",
+    "once you have one.",
+    "",
+    "photo path is deliberately named for the role (team-floor-manager.jpg,",
+    "team-head-trainer.jpg, ...) per the brief's naming convention, so it's",
+    "obvious which file to drop in. Until that file exists, the card shows",
+    "the brand dot pattern instead of a broken image.",
+    "",
+    "featured: true puts this person in the home page preview (keep it to",
+    "3-4 people, brief specifically asked for 3-4).",
+    "",
+    "specialization is optional — omit the field entirely for a role that",
+    "doesn't need one, rather than leaving it empty."
+  ],
+  "members": [
+    {
+      "id": "floor-manager",
+      "name": "[Trainer Name]",
+      "role": "Floor Manager",
+      "bio": "Keeps the gym floor running smoothly, supports members and coordinates with the training team.",
+      "photo": "assets/img/team-floor-manager.jpg",
+      "featured": true
+    },
+    {
+      "id": "head-trainer",
+      "name": "[Trainer Name]",
+      "role": "Head Trainer",
+      "bio": "Oversees programming across the floor and signs off on every new member's starting plan.",
+      "photo": "assets/img/team-head-trainer.jpg",
+      "specialization": ["Strength programming", "Form correction"],
+      "featured": true
+    },
+    {
+      "id": "personal-trainer",
+      "name": "[Trainer Name]",
+      "role": "Personal Trainer",
+      "bio": "Works one-on-one with members on strength, technique and progress tracked session to session.",
+      "photo": "assets/img/team-personal-trainer.jpg",
+      "specialization": ["1:1 coaching"],
+      "featured": true
+    },
+    {
+      "id": "strength-conditioning-coach",
+      "name": "[Trainer Name]",
+      "role": "Strength & Conditioning Coach",
+      "bio": "Runs strength and conditioning programming for members training for performance, not just aesthetics.",
+      "photo": "assets/img/team-strength-conditioning-coach.jpg",
+      "specialization": ["Strength & conditioning", "CrossFit"],
+      "featured": true
+    },
+    {
+      "id": "yoga-instructor",
+      "name": "[Trainer Name]",
+      "role": "Yoga Instructor",
+      "bio": "Leads the yoga sessions — mobility, breath work and the sessions members lean on for recovery.",
+      "photo": "assets/img/team-yoga-instructor.jpg"
+    },
+    {
+      "id": "zumba-instructor",
+      "name": "[Trainer Name]",
+      "role": "Zumba Instructor",
+      "bio": "Runs the Zumba floor with the kind of energy that makes the cardio feel beside the point.",
+      "photo": "assets/img/team-zumba-instructor.jpg"
+    },
+    {
+      "id": "functional-training-coach",
+      "name": "[Trainer Name]",
+      "role": "Functional Training Coach",
+      "bio": "Coaches functional and movement-based training built around everyday strength and mobility.",
+      "photo": "assets/img/team-functional-training-coach.jpg",
+      "specialization": ["Functional training", "Mobility"]
+    },
+    {
+      "id": "nutrition-coach",
+      "name": "[Trainer Name]",
+      "role": "Nutrition Coach",
+      "bio": "Runs nutrition consultations and works with the training team on programs that need both.",
+      "photo": "assets/img/team-nutrition-coach.jpg"
+    },
+    {
+      "id": "front-desk",
+      "name": "[Trainer Name]",
+      "role": "Front Desk / Member Support",
+      "bio": "The first and last person most members talk to — membership, scheduling and everything in between.",
+      "photo": "assets/img/team-front-desk.jpg"
+    }
+  ]
+}
